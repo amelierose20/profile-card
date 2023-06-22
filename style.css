@@ -1,14 +1,16 @@
+/* police coréenne */
 @font-face {
     font-family: '1HoonGomusin Regular';
     src: url("1HoonGomusin Regular.ttf");
 }
 
-
+/* balise body */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
-  
+
+/* balise h1 */
 h1 {
     font-family: '1HoonGomusin Regular';
     color: #002FB8;
@@ -16,13 +18,15 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* balise h2 */
 h2 {
     color: #000000;
     font-size: 1.5em;
     margin-bottom: 30px;
 }
 
-.parallax {
+/* classe parallax (image arrière plan) */
+.background {
   background-image: url("background.jpeg");
   background-size: cover;
   background-position: center;
@@ -32,13 +36,15 @@ h2 {
   overflow: hidden;
   scale: 1;
 }
-  
+
+/* classe avatar (photo de profil) */
 .avatar {
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
     box-shadow: 5px 5px 5px lightgray;
 }
 
+/* classe container (contenu de la page : bloc de la page entière) */
 .container {
     text-align: center;
     color: black;
@@ -49,33 +55,39 @@ h2 {
     margin-left: 12.5%;
     background-color: white;
     opacity: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
-  
+
+/* classe skills (compétences) */
 .skills {
     list-style: none;
     padding: 0;
     margin-bottom: 30px;
 }
-  
+
+/* balise li des skills */
 .skills li {
     display: inline-block;
     margin: 5px;
     padding: 5px 10px;
     background-color: rgba(0, 139, 184, 0.3);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }
-  
+
+/* classe links (liens) */
 .links {
     list-style: none;
     padding: 0;
     margin-top: 20px;
 }
-  
+
+/* balise li des links */
 .links li {
     display: inline-block;
     margin: 5px;
 }
-  
+
+/* balise a (liens cliquable) */
 .links a {
     display: inline-block;
     padding: 10px 20px;
@@ -83,27 +95,45 @@ h2 {
     color: black;
     text-decoration: none;
     border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }
 
+.links a:hover {
+    background-color: rgba(0, 184, 138, 0.6);
+}
+
+/* classe reasons (bloc de texte) */
 .reasons {
     text-align: left;
-    padding-top: 25px;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 25px 15% 50px 15%;
 }
 
-.reasons > ul {
+/* balise ul (liste du bloc de texte) */
+.reasons ul {
     padding-top: 15px;
 }
 
-.reasons > ul > li {
+/* balise li (points du bloc de texte) */
+.reasons ul li {
     margin-bottom: 15px;
 }
 
+/* classe footer */
+.footer {
+    background-color: #d9faf2;
+    padding: 10px 0 10px 0;
+}
+
+/* affichage écran < 768px */
 @media (max-width: 768px) {
     .container {
-      width: 80%;
-      margin-left: 10%;
+      width: 94%;
+      margin-left: 3%;
+    }
+
+    .reasons {
+        padding-left: 5%;
+        padding-right: 5%;
     }
   
     h1 {
@@ -113,5 +143,19 @@ h2 {
     h2 {
       font-size: 1.2em;
     }
-  }
+}
+  
+/* affichage écran > 1200px */
+@media (min-width: 1200px) {
+    .container {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .reasons {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+  
+}
   
